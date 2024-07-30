@@ -3,11 +3,12 @@ import apiAgent from "../../app/api/apiAgent";
 import { IPhoto } from "../../app/models/Photo";
 
 function Axios() {
+  console.log("Axios rendering");
   const [photo, setPhoto] = useState<IPhoto>();
 
   async function fetchData() {
     try {
-      const result = await apiAgent.photos(1);
+      const result = await apiAgent.getPhotos(1);
       setPhoto(result);
     } catch (error) {
       console.log(error);
