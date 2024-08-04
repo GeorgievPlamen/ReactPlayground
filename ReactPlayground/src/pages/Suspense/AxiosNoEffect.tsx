@@ -1,15 +1,16 @@
 import apiAgent from "../../app/api/apiAgent";
 
 function AxiosNoEffect() {
-  const data = apiAgent.usePhotos(1);
+  const photoData = apiAgent.fetchPhotos(1);
+  const photo = photoData();
   return (
     <>
       <div>AxiosNoEffect</div>
-      <div>{data?.albumId}</div>
-      <div>{data?.id}</div>
-      <div>{data?.thumbnailUrl}</div>
-      <div>{data?.title}</div>
-      <div>{data?.url}</div>
+      <div>{photo?.albumId}</div>
+      <div>{photo?.id}</div>
+      <div>{photo?.thumbnailUrl}</div>
+      <div>{photo?.title}</div>
+      <div>{photo?.url}</div>
     </>
   );
 }
