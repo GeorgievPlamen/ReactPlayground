@@ -1,4 +1,3 @@
-function HelloWorld() {
-  return <div>HelloWorld</div>;
+export default function HelloWorld() {
+  return <div>Hello World</div>;
 }
-export default HelloWorld;
